@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,19 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var ndarraylike2scalar = require( '@stdlib/ndarray-base-ndarraylike2scalar' );
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-ext-base-zunitspace' ).ndarray;
-
-
-// MAIN //
+import { complex128ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Fills a one-dimensional double-precision complex floating-point ndarray with linearly spaced numeric elements which increment by `1` starting from a specified value.
@@ -40,8 +32,8 @@ var strided = require( '@stdlib/blas-ext-base-zunitspace' ).ndarray;
 *     -   a one-dimensional input ndarray.
 *     -   a zero-dimensional ndarray containing a starting value.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {ndarray} input ndarray
+* @param arrays - array-like object containing ndarrays
+* @returns input ndarray
 *
 * @example
 * var Complex128Vector = require( '@stdlib/ndarray-vector-complex128' );
@@ -57,14 +49,9 @@ var strided = require( '@stdlib/blas-ext-base-zunitspace' ).ndarray;
 * var out = zunitspace( [ x, start ] );
 * // returns <ndarray>[ <Complex128>[ 3.0, 0.0 ], <Complex128>[ 4.0, 0.0 ], <Complex128>[ 5.0, 0.0 ], <Complex128>[ 6.0, 0.0 ] ]
 */
-function zunitspace( arrays ) {
-	var start = ndarraylike2scalar( arrays[ 1 ] );
-	var x = arrays[ 0 ];
-	strided( numelDimension( x, 0 ), start, getData( x ), getStride( x, 0 ), getOffset( x ) ); // eslint-disable-line max-len
-	return x;
-}
+declare function zunitspace( arrays: [ complex128ndarray, complex128ndarray ] ): complex128ndarray;
 
 
 // EXPORTS //
 
-module.exports = zunitspace;
+export = zunitspace;
