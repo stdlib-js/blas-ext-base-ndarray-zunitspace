@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-25)
+## Unreleased (2026-11-11)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`2780757`](https://github.com/stdlib-js/stdlib/commit/2780757ca6daae57598a53022837a497e55b8d41) - **style:** re-enable lint rule [(#13554)](https://github.com/stdlib-js/stdlib/pull/13554) _(by Philipp Burckhardt)_
 -   [`cfc58ab`](https://github.com/stdlib-js/stdlib/commit/cfc58ab9bb051fe400e496981598c0bbfc0da30e) - **feat:** add `blas/ext/base/ndarray/zunitspace` [(#11730)](https://github.com/stdlib-js/stdlib/pull/11730) _(by Muhammad Haris, Athan Reines)_
 
